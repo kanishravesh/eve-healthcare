@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f6f8fb;
+    color: #172033;
+}
+
+header {
+    height: 72px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid #e8ebf0;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.logo span {
+    font-weight: 500;
+    color: #667085;
+}
+
+.nav-actions button {
+    border: none;
+    background: transparent;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+main {
+    width: 86%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero {
+    margin: 45px 0;
+    padding: 55px;
+    border-radius: 28px;
+    background: white;
+    border: 1px solid #e9edf3;
+    box-shadow: 0 12px 40px rgba(20, 30, 50, 0.06);
+}
+
+.tag {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #6875f5;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    color: #6875f5;
+}
+
+.subtitle {
+    margin-top: 18px;
+    color: #667085;
+    font-size: 17px;
+    max-width: 560px;
+    line-height: 1.6;
+}
+
+.section-heading {
+    margin: 35px 0 20px;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+}
+
+.centre-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.centre-card {
+    background: white;
+    border: 1px solid #e8ebf0;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(20, 30, 50, 0.05);
+}
+
+.centre-card h3 {
+    font-size: 21px;
+    margin-bottom: 6px;
+}
+
+.location {
+    color: #667085;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.test {
+    border-top: 1px solid #edf0f4;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.test-name {
+    font-weight: 600;
+}
+
+.price {
+    color: #6875f5;
+    font-weight: 700;
+}
+
+.primary-btn {
+    border: none;
+    background: #6875f5;
+    color: white;
+    padding: 11px 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.primary-btn:hover {
+    opacity: 0.9;
+}
+
+.auth-card {
+    background: white;
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto 40px;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #e8ebf0;
+    box-shadow: 0 10px 30px rgba(20, 30, 50, 0.08);
+}
+
+.auth-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.auth-tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.auth-card input,
+.modal-card input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #dfe3ea;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.auth-card .primary-btn,
+.modal-card .primary-btn {
+    width: 100%;
+}
+
+#authMessage,
+#bookingMessage {
+    margin-top: 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.booking-card {
+    background: white;
+    border: 1px solid #e8ebf0;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking-info p {
+    margin-top: 5px;
+    color: #667085;
+    font-size: 14px;
+}
+
+.status {
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    background: #eef0ff;
+    color: #6875f5;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-card {
+    position: relative;
+    background: white;
+    width: 430px;
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.modal-card h2 {
+    margin-bottom: 5px;
+}
+
+.muted {
+    color: #667085;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    .booking-card {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+}

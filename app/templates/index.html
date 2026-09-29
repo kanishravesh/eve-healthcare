@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVE Healthcare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">EVE <span>Healthcare</span></div>
+
+    <div class="nav-actions">
+        <button id="loginBtn" onclick="showLogin()">Login</button>
+        <button id="logoutBtn" onclick="logout()" class="hidden">Logout</button>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div>
+            <p class="tag">DIAGNOSTIC TESTS</p>
+            <h1>Healthcare testing,<br><span>made simple.</span></h1>
+            <p class="subtitle">
+                Find a diagnostic centre, choose your test and book your appointment.
+            </p>
+        </div>
+    </section>
+
+    <section id="authSection" class="auth-card hidden">
+        <div class="auth-tabs">
+            <button id="loginTab" onclick="showLogin()">Login</button>
+            <button id="signupTab" onclick="showSignup()">Sign Up</button>
+        </div>
+
+        <div id="loginForm">
+            <input id="loginEmail" type="email" placeholder="Email">
+            <input id="loginPassword" type="password" placeholder="Password">
+            <button class="primary-btn" onclick="login()">Login</button>
+        </div>
+
+        <div id="signupForm" class="hidden">
+            <input id="signupName" type="text" placeholder="Full name">
+            <input id="signupEmail" type="email" placeholder="Email">
+            <input id="signupPassword" type="password" placeholder="Password">
+            <button class="primary-btn" onclick="signup()">Create account</button>
+        </div>
+
+        <p id="authMessage"></p>
+    </section>
+
+    <section>
+        <div class="section-heading">
+            <div>
+                <p class="tag">EXPLORE</p>
+                <h2>Diagnostic centres</h2>
+            </div>
+        </div>
+
+        <div id="centres" class="centre-grid"></div>
+    </section>
+
+    <section id="bookingsSection" class="hidden">
+        <div class="section-heading">
+            <div>
+                <p class="tag">YOUR ACTIVITY</p>
+                <h2>My bookings</h2>
+            </div>
+        </div>
+
+        <div id="bookings"></div>
+    </section>
+
+</main>
+
+<div id="bookingModal" class="modal hidden">
+    <div class="modal-card">
+        <button class="close-btn" onclick="closeModal()">×</button>
+
+        <p class="tag">BOOK TEST</p>
+        <h2 id="modalTestName"></h2>
+        <p id="modalCentreName" class="muted"></p>
+
+        <input id="appointmentTime" type="datetime-local">
+
+        <button class="primary-btn" onclick="createBooking()">
+            Confirm Booking
+        </button>
+
+        <p id="bookingMessage"></p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
