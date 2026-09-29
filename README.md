@@ -550,6 +550,4 @@ Run tests with:
 pytest
 ```
 
-## Author
 
-Built as an SDE Intern backend assignment for EVE Healthcare.
