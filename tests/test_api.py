@@ -7,8 +7,9 @@ from app.models import Payment
 @pytest.fixture
 def client():
     app = create_app({
-        "TESTING": True,
-        "SQLALCHEMY_DATABASE_URI": "sqlite:///:memory:"
+     "TESTING": True,
+     "SQLALCHEMY_DATABASE_URI": "sqlite:///:memory:",
+     "JWT_SECRET_KEY": "test-secret-key"
     })
 
     with app.app_context():
